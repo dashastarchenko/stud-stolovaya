@@ -81,13 +81,18 @@ export class CartComponent implements OnInit {
     let index: number = -1;
     for (var i = 0; i < cart.length; i++) {
       let it: Item = JSON.parse(cart[i]);
-      if (it.menu.id == id) { //???
+      if (it.menu.id == id) {
         cart.splice(i, 1);
         break;
       }
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     this.loadCart();
+  }
+
+  getTotalCost() {
+    return (this.total);
+    // return this.items.map(it => it.menu.cost).reduce((acc, value) => acc + value, 0);
   }
 
 }
@@ -111,8 +116,6 @@ export class CartComponent implements OnInit {
 //   // ];
 //
 //   /** Gets the total cost of all transactions. */
-//   getTotalCost() {
-//     return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
-//   }
+
 // }
 
