@@ -1,0 +1,34 @@
+<h2>Меню Столовая Главная</h2>
+<ul class="menu">
+  <li *ngFor="let item of menu"
+      [class.selected]="item === selectedItem"
+      (click)="onSelect(item)">
+    <span class="badge">{{item.id}}</span> {{item.name}}
+  </li>
+</ul>
+
+<app-item-detail [item]="selectedItem"></app-item-detail>
+
+
+
+<h3>Menu List</h3>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <!--<th>Photo</th>-->
+    <th>Buy</th>
+  </tr>
+  <tr *ngFor="let item of menu">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.cost}}</td>
+    <!--<td>-->
+      <!--<img src="assets/http://learningprogramming.net/wp-content/uploads/mean_stack/angular/{{product.photo}}" width="50">-->
+    <!--</td>-->
+    <td>
+      <a [routerLink]="['/cart', { id:item.id }]">Buy Now</a>
+    </td>
+  </tr>
+</table>
