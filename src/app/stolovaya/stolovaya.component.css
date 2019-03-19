@@ -46,3 +46,12 @@
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
+
+table {
+  width: 100%;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+

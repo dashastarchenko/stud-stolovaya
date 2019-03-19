@@ -12,23 +12,28 @@
 
 
 <h3>Menu List</h3>
-<table border="1">
-  <tr>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Price</th>
-    <!--<th>Photo</th>-->
-    <th>Buy</th>
-  </tr>
-  <tr *ngFor="let item of menu">
-    <td>{{item.id}}</td>
-    <td>{{item.name}}</td>
-    <td>{{item.cost}}</td>
-    <!--<td>-->
-      <!--<img src="assets/http://learningprogramming.net/wp-content/uploads/mean_stack/angular/{{product.photo}}" width="50">-->
-    <!--</td>-->
-    <td>
-      <a [routerLink]="['/cart', { id:item.id }]">Buy Now</a>
-    </td>
-  </tr>
+
+
+<table mat-table [dataSource]="menu" class="mat-elevation-z8">
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Название </th>
+    <td mat-cell *matCellDef="let item"> {{item.name}} </td>
+  </ng-container>
+
+  <!-- Cost Column -->
+  <ng-container matColumnDef="cost">
+    <th mat-header-cell *matHeaderCellDef> Цена </th>
+    <td mat-cell *matCellDef="let item"> {{item.cost | currency:'EUR':true}} </td>
+  </ng-container>
+
+  <!-- Buy Column -->
+  <ng-container matColumnDef="buy">
+    <th mat-header-cell *matHeaderCellDef> Купить </th>
+    <td mat-cell *matCellDef="let item">  <a [routerLink]="['/cart', { id:item.id }]"> Добавить в корзину </a> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

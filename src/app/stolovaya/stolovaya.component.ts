@@ -12,6 +12,7 @@ export class StolovayaComponent implements OnInit {
 
   menu: Menu[];
   selectedItem: Menu;
+  displayedColumns: string[] = ['name', 'cost', 'buy'];
 
   constructor(private menuService: MenuService) { }
 
