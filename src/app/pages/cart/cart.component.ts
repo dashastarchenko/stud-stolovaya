@@ -97,25 +97,3 @@ export class CartComponent implements OnInit {
 
 }
 
-
-// export interface Transaction {
-//   item: string;
-//   cost: number;
-// }
-
-//
-// export class TableFooterRowExample {
-//
-//   // transactions: Transaction[] = [
-//   //   {item: 'Beach ball', cost: 4},
-//   //   {item: 'Towel', cost: 5},
-//   //   {item: 'Frisbee', cost: 2},
-//   //   {item: 'Sunscreen', cost: 4},
-//   //   {item: 'Cooler', cost: 25},
-//   //   {item: 'Swim suit', cost: 15},
-//   // ];
-//
-//   /** Gets the total cost of all transactions. */
-
-// }
-
