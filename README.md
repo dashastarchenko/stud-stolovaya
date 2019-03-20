@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+Чтобы запустить приложение необходимо иметь установленный Node.js и  npm package manager.
+В командной строке из папки проекта выполните команду ng serve -o и браузер откроется автоматически
+Если возникнут проблемы, подробнее описано здесь: https://angular.io/guide/quickstart
+Всё приложение выполнено на языке TypeScript с использованием фреймворка Angular и UI компонент для Angular - Angular Materials. Для разметки использовались scss (см.папку ui)
