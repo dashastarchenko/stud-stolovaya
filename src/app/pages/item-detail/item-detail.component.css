@@ -1,0 +1,10 @@
+mat-card-header.mat-card-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-card.mat-card {
+  width: 48%;
+}

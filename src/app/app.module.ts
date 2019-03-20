@@ -1,98 +1,62 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PageComponent } from './core/views/root/page.component';
 
-// Angular Material Components
+import { CartComponent } from './pages/cart/cart.component';
+import { StolovayaComponent } from './pages/stolovaya/stolovaya.component';
+import { CafeComponent } from './pages/cafe/cafe.component';
+import { PancakesComponent } from './pages/pancakes/pancakes.component';
+import { BufetComponent } from './pages/bufet/bufet.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ItemDetailComponent } from './pages/item-detail/item-detail.component';
+import {UIModule} from './ui/ui.module';
+import { TestMaterialModule } from './core/material-module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material';
-import {MatButtonModule} from '@angular/material';
-import {MatInputModule} from '@angular/material/input';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatCardModule} from '@angular/material/card';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {MatChipsModule} from '@angular/material/chips';
+import {LeftColComponent} from './core/views/body/left-col/left-col.component';
+import {RightColComponent} from './core/views/body/right-col/right-col.component';
+import {MiddleColComponent} from './core/views/body/middle-col/middle-col.component';
+import {BodyComponent} from './core/views/body/body.component';
+import {MainMenuComponent} from './core/views/main-menu/main-menu.component';
+import {MenuComponent} from './core/views/main-menu/menu/menu.component';
+import {ProfileComponent} from './core/views/main-menu/profile/profile.component';
+import {FeedbackComponent, FeedbackDialogComponent} from './core/views/main-menu/profile/feedback/feedback.component';
+import {SearchComponent} from './core/views/main-menu/search/search.component';
 import {MatIconModule} from '@angular/material/icon';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatTableModule} from '@angular/material/table';
-import {MatSortModule} from '@angular/material/sort';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import { CartComponent } from './cart/cart.component';
-import { StolovayaComponent } from './stolovaya/stolovaya.component';
-import { CafeComponent } from './cafe/cafe.component';
-import { PancakesComponent } from './pancakes/pancakes.component';
-import { BufetComponent } from './bufet/bufet.component';
-import { AppRoutingModule } from './/app-routing.module';
-import { ItemDetailComponent } from './item-detail/item-detail.component';
-import {UIModule} from '../../ui/ui.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    PageComponent,
+    LeftColComponent,
+    RightColComponent,
+    MiddleColComponent,
+    BodyComponent,
+    MainMenuComponent,
+    MenuComponent,
+    ProfileComponent,
+    FeedbackComponent,
+    SearchComponent,
     CartComponent,
     StolovayaComponent,
     CafeComponent,
     PancakesComponent,
     BufetComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    FeedbackComponent,
+    FeedbackDialogComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatCheckboxModule,
-    MatCheckboxModule,
-    MatButtonModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatStepperModule,
-    MatTabsModule,
-    MatExpansionModule,
-    MatButtonToggleModule,
-    MatChipsModule,
-    MatIconModule,
-    MatProgressSpinnerModule,
-    MatProgressBarModule,
-    MatDialogModule,
-    MatTooltipModule,
-    MatSnackBarModule,
-    MatTableModule,
-    MatSortModule,
-    MatPaginatorModule,
     AppRoutingModule,
-    UIModule
+    UIModule,
+    TestMaterialModule,
+    ReactiveFormsModule,
+    MatIconModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [FeedbackDialogComponent, FeedbackComponent],
+  bootstrap: [PageComponent]
 })
 export class AppModule { }

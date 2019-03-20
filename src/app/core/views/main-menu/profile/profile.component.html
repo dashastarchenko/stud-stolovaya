@@ -1,0 +1,12 @@
+<button mat-button [matMenuTriggerFor]="profileDrop">
+  <mat-icon>settings</mat-icon>
+  <mat-icon>arrow_drop_down</mat-icon>
+</button>
+<mat-menu #profileDrop="matMenu">
+  <button mat-menu-item>
+    <mat-icon>help</mat-icon>
+    <span>Помощь</span>
+  </button>
+  <app-feedback></app-feedback>
+
+</mat-menu>

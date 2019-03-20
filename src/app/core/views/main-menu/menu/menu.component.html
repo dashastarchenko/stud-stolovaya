@@ -1,0 +1,102 @@
+<button mat-button [matMenuTriggerFor]="menu_first">Столовые</button>
+<button mat-button [matMenuTriggerFor]="menu_second" routerLink="/cafe" >Буфеты</button>
+<button mat-button [matMenuTriggerFor]="menu_third" routerLink="/pancakes">Блинная</button>
+<button mat-button [matMenuTriggerFor]="menu_fourth" routerLink="/cart">Корзина</button>
+<button mat-button [matMenuTriggerFor]="menu_fifth">Menu5</button>
+
+<mat-menu #menu_first="matMenu" [overlapTrigger]="false" class="full-width">
+  <div class="matMenuDiv">
+    <mat-list>
+      <mat-list-item class="mat-list-header">ГЗ</mat-list-item>
+            <mat-list-item><a mat-button routerLink="/stl1">Большая 1 этаж</a></mat-list-item>
+            <mat-list-item><a mat-button routerLink="/stl1">Большая 2 этаж</a></mat-list-item>
+            <mat-list-item><a mat-button routerLink="/stl1">Профессорская 1 этаж</a></mat-list-item>
+            <mat-list-item><a mat-button routerLink="/stl1">Столовка на 3 этаже</a></mat-list-item>
+    </mat-list>
+  </div>
+  <div class="matMenuDiv">
+    <mat-list>
+      <mat-list-item class="mat-list-header">УЛК</mat-list-item>
+      <mat-list-item><a mat-button routerLink="/stl1">Большая 1 этаж</a></mat-list-item>
+      <mat-list-item><a mat-button routerLink="/stl1">Большая 2 этаж</a></mat-list-item>
+    </mat-list>
+  </div>
+  <div class="matMenuDiv">
+    <mat-list>
+      <mat-list-item class="mat-list-header">Другие</mat-list-item>
+      <mat-list-item><a mat-button routerLink="/stl1">Большая 1 этаж</a></mat-list-item>
+      <mat-list-item><a mat-button routerLink="/stl1">Большая 2 этаж</a></mat-list-item>
+    </mat-list>
+  </div>
+</mat-menu>
+<mat-menu #menu_second="matMenu" [overlapTrigger]="false" class="full-width">
+  <div class="matMenuDiv">
+    <mat-list>
+      <mat-list-item class="mat-list-header">Ордера</mat-list-item>
+      <mat-list-item><a mat-button routerLink="/orders">Новый ордер</a></mat-list-item>
+      <mat-list-item><a mat-button routerLink="/orders">Рабочий процесс</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Холдинг</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Пользователь</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Счёт</a></mat-list-item>
+    </mat-list>
+  </div>
+  <div class="matMenuDiv">
+    <mat-list>
+      <mat-list-item class="mat-list-header">Редактировать</mat-list-item>
+      <mat-list-item><a mat-button href="#">Банк</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Компания</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Холдинг</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Пользователь</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Счёт</a></mat-list-item>
+    </mat-list>
+  </div>
+</mat-menu>
+<mat-menu #menu_third="matMenu" [overlapTrigger]="false" class="full-width">
+  <div class="matMenuDiv">
+    <mat-list>
+      <mat-list-item class="mat-list-header">Добавить</mat-list-item>
+      <mat-list-item><a mat-button href="#">Банк</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Компания</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Холдинг</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Пользователь</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Счёт</a></mat-list-item>
+    </mat-list>
+  </div>
+  <div class="matMenuDiv">
+    <mat-list>
+      <mat-list-item class="mat-list-header">Редактировать</mat-list-item>
+      <mat-list-item><a mat-button href="#">Банк</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Компания</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Холдинг</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Пользователь</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Счёт</a></mat-list-item>
+    </mat-list>
+  </div>
+</mat-menu>
+<mat-menu #menu_fourth="matMenu" [overlapTrigger]="false" class="full-width">
+  <div class="matMenuDiv">
+    <mat-list>
+      <mat-list-item class="mat-list-header">Добавить</mat-list-item>
+      <mat-list-item><a mat-button href="#">Банк</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Компания</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Холдинг</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Пользователь</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Счёт</a></mat-list-item>
+    </mat-list>
+  </div>
+  <div class="matMenuDiv">
+    <mat-list>
+      <mat-list-item class="mat-list-header">Редактировать</mat-list-item>
+      <mat-list-item><a mat-button href="#">Банк</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Компания</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Холдинг</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Пользователь</a></mat-list-item>
+      <mat-list-item><a mat-button href="#">Счёт</a></mat-list-item>
+    </mat-list>
+  </div>
+</mat-menu>
+<mat-menu #menu_fifth="matMenu" [overlapTrigger]="false" class="full-width">
+  <div class="matMenuDiv">
+    <mat-spinner></mat-spinner>
+  </div>
+</mat-menu>
